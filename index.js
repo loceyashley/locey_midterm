@@ -15,7 +15,11 @@ app.use(express.static("Public"));
 //tell app to use body parser
 app.use(bodyParser.urlencoded({extended: true}));
 
-
+//get homepage
+app.get('/', function(req,res){
+    //return to homepage
+    res.render('index');
+})
 
 
 

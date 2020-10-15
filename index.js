@@ -21,6 +21,16 @@ app.get('/', function(req,res){
     res.render('index');
 })
 
+//fetch comic information and send to front end as JSON data
+app.get('/CurrentComic', function(req, res){
+    let CurrentComicData;
+    fetch('https://xkcd.com/info.0.json',)
+    .then(res => res.json())
+    .then(data => {
+        CurrentComicData = data;
+        res.json(CurrentComicData);
+    });
+})
 
 
 //server setup 

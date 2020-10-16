@@ -32,13 +32,19 @@ app.get('/currentComic', function(req, res){
 
 //get information for random date
 app.get('/randomComic', function(req, res){
-    let num='523'
+    try{
+    let num = Math.random() * (2800 - 1) + 1;
+    }
+    catch{ 
+        console.log("can not do this");
+    };
     fetch('https://xkcd.com/' +num + '/info.0.json',)
     .then(res => res.json())
     .then(data => {
         res.render('randomComic', {data:data});
     });
 })
+
 
 
 //server setup 

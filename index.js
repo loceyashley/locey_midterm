@@ -22,13 +22,21 @@ app.get('/', function(req,res){
 })
 
 //fetch comic information and send to front end as JSON data
-app.get('/CurrentComic', function(req, res){
-    let CurrentComicData;
+app.get('/currentComic', function(req, res){
     fetch('https://xkcd.com/info.0.json',)
     .then(res => res.json())
     .then(data => {
-        CurrentComicData = data;
-        res.json(CurrentComicData);
+        res.render('currentComic', {data:data});
+    });
+})
+
+//get information for random date
+app.get('/randomComic', function(req, res){
+    let num='523'
+    fetch('https://xkcd.com/' +num + '/info.0.json',)
+    .then(res => res.json())
+    .then(data => {
+        res.render('randomComic', {data:data});
     });
 })
 

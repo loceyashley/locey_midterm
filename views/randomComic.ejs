@@ -8,6 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+        <link rel="stylesheet" href="public/styles.css">
+
     <title>Random Comic</title>
   </head>
   <body>
@@ -33,12 +35,13 @@
     </nav>
 
     <!-- to get and display data-->
-    <%= data.month %> 
-    <%= data.day %>
-    <%= data.year %> 
-    <%= data.num %> 
-    <%= data.safe_title %> 
-    <img src="<%=data.img%>" alt="<%= data.alt %> " width="500" height="600" max-width="300" max-height="500">
+    <div class = "DesctipR">
+    <h1> <%= data.month %> + / + <%= data.day %> + / <%= data.year %> </h1>
+    <h2> Comic Num :  <%= data.num %> </h2>
+    <h3> Comic Title <%= data.safe_title %> <h3>
+    </div>
+    
+    <img src="<%=data.img%>" alt="<%= data.alt %> " width="500" height="600" max-width="300" max-height="500" style="position: absolute; left: 60%;">
     
 
 

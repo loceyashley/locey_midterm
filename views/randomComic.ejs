@@ -24,10 +24,7 @@
             <li class="nav-item" th:classappend="${content} == 'home' ? 'active' : ''">
                 <a class="nav-link" href="/">Home <span class="sr-only" th:if="${content} == 'home'"></span></a>
             </li>
-           <li class="nav-item" th:classappend="${content} == 'contact' ? 'active' : ''">
-                <a class="nav-link" href="/currentComic">Current Comic <span class="sr-only" th:if="${content} == 'currentComic'"></span></a>
-            </li> 
-           <li class="nav-item" th:classappend="${content} == 'contact' ? 'active' : ''">
+           <li class="nav-item" th:classappend="${content} == 'random' ? 'active' : ''">
                 <a class="nav-link" href="/randomComic">Random Comic<span class="sr-only" th:if="${content} == 'randomComic'">(current)</span></a>
             </li> 
             </ul>

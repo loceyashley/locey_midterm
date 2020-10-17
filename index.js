@@ -16,23 +16,25 @@ app.use(express.static("Public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 //get homepage
-app.get('/', function(req,res){
-    //return to homepage
-    res.render('index');
-})
-
-//fetch comic information and send to front end as JSON data
-app.get('/currentComic', function(req, res){
+app.get('/', function(req, res){
     fetch('https://xkcd.com/info.0.json',)
     .then(res => res.json())
     .then(data => {
-        res.render('currentComic', {data:data});
+        res.render('index', {data:data});
     });
 })
 
+
+//function to get random number
+function getRand(){
+    let RandNum = Math.random() * (2000 +1) + 1;
+
+    return Math.floor(RandNum);
+}
+
 //get information for random date
 app.get('/randomComic', function(req, res){
-    let num = Math.floor((Math.random() * 2800-1)+1);
+    let num = getRand();
     fetch('https://xkcd.com/' +num + '/info.0.json',)
     .then(res => res.json())
     .then(data => {

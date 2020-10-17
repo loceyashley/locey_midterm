@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="public/styles.css">
 
-    <title>Welcome to the Website!</title>
+    <title>Current Comic</title>
   </head>
   <body  style="  background-color:#d3d8e0; ">
   <!--Navigation bar-->
@@ -24,10 +24,7 @@
             <li class="nav-item" th:classappend="${content} == 'home' ? 'active' : ''">
                 <a class="nav-link" href="/">Home <span class="sr-only" th:if="${content} == 'home'">(current)</span></a>
             </li>
-            <li class="nav-item" th:classappend="${content} == 'contact' ? 'active' : ''">
-                <a class="nav-link" href="/currentComic">Current Comic <span class="sr-only" th:if="${content} == 'currentComic'"></span></a>
-            </li> 
-           <li class="nav-item" th:classappend="${content} == 'contact' ? 'active' : ''">
+           <li class="nav-item" th:classappend="${content} == 'random' ? 'active' : ''">
                 <a class="nav-link" href="/randomComic">Random Comic <span class="sr-only" th:if="${content} == 'randomComic'"></span></a>
             </li> 
             </ul>
@@ -41,6 +38,20 @@
         <hr class="my-4">
         <hr class="my-4">
     </div>
+
+
+    <div class="CurrentH" style="height:100px; margin-top:20px; font-style:bold; text-decoration:underline; text-align:center; color:black;">
+        <h2>The following is the information about your current comic:</h2>
+    </div>
+
+    <!-- to get and display data-->
+    <div class = "DesctipC" style="text-align:center; ">
+    <h1 style="font-weight:normal; font-size:30px;"> <b>Date: </b> <%= data.month %>  /  <%= data.day %>  / <%= data.year %> </h1>
+    <h2 style="font-weight:normal; font-size::30px;"> <b>Comic Num:</b>  <%= data.num %> </h2>
+    <h3 style="font-weight:normal; font-size:30px;"> <b>Comic Title:</b> <%= data.safe_title %> <h3>
+    </div>
+    
+    <center><img src="<%=data.img%>" alt="<%= data.alt %> " max-width="300" max-height="500" style="margin-top:20px;"> </center>
 
 
     <!-- Optional JavaScript -->

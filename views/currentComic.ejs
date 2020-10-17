@@ -39,10 +39,10 @@
     </div>
 
     <!-- to get and display data-->
-    <div class = "DesctipC" style="size: 20px; ; text-align:center; ">
-    <h1 style="font-weight:normal; size:30px;"> Date: <%= data.month %>  /  <%= data.day %>  / <%= data.year %> </h1>
-    <h2 style="font-weight:normal; size:30px;"> Comic Num :  <%= data.num %> </h2>
-    <h3 style="font-weight:normal; size:30px;"> Comic Title: <%= data.safe_title %> <h3>
+    <div class = "DesctipC" style="text-align:center; ">
+    <h1 style="font-weight:normal; font-size:30px;"> <b>Date: </b> <%= data.month %>  /  <%= data.day %>  / <%= data.year %> </h1>
+    <h2 style="font-weight:normal; font-size::30px;"> <b>Comic Num:</b>  <%= data.num %> </h2>
+    <h3 style="font-weight:normal; font-size:30px;"> <b>Comic Title:</b> <%= data.safe_title %> <h3>
     </div>
     
     <center><img src="<%=data.img%>" alt="<%= data.alt %> " max-width="300" max-height="500" style="margin-top:20px;"> </center>

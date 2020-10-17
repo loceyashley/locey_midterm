@@ -12,7 +12,7 @@
 
     <title>Current Comic</title>
   </head>
-  <body>
+  <body style="  background-color:#d3d8e0; ">
   <!--Navigation bar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Midterm</a>
@@ -34,15 +34,18 @@
         </div>
     </nav>
 
-    <!-- to get and display data-->
-    <%= data.month %> 
-    <%= data.day %>
-    <%= data.year %> 
-    <%= data.num %> 
-    <%= data.safe_title %> 
-    <img src="<%=data.img%>" alt="<%= data.alt %> " max-width="300" max-height="500" style="float: right";>
-    
+   <div class="CurrentH" style="height:100px; margin-top:20px; font-style:bold; text-decoration:underline; text-align:center; color:black;">
+        <h2>The following is the information about your current comic:</h2>
+    </div>
 
+    <!-- to get and display data-->
+    <div class = "DesctipC" style="size: 20px; ; text-align:center; ">
+    <h1 style="font-weight:normal; size:30px;"> Date: <%= data.month %>  /  <%= data.day %>  / <%= data.year %> </h1>
+    <h2 style="font-weight:normal; size:30px;"> Comic Num :  <%= data.num %> </h2>
+    <h3 style="font-weight:normal; size:30px;"> Comic Title: <%= data.safe_title %> <h3>
+    </div>
+    
+    <center><img src="<%=data.img%>" alt="<%= data.alt %> " max-width="300" max-height="500" style="margin-top:20px;"> </center>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

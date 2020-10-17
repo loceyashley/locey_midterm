@@ -25,15 +25,14 @@ app.get('/', function(req, res){
 })
 
 
-//function to get random number
-function getRand(){
-    let RandNum = Math.random() * (2000 +1) + 1;
-
-    return Math.floor(RandNum);
-}
 
 //get information for random date
 app.get('/randomComic', function(req, res){
+    //function to generate random 
+    function getRand(){
+    let RandNum = Math.random() * (2000 +1) + 1;
+    return Math.floor(RandNum);
+};
     let num = getRand();
     fetch('https://xkcd.com/' +num + '/info.0.json',)
     .then(res => res.json())

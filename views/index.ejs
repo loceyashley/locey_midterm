@@ -35,21 +35,20 @@
    <!--Jumbotron-->
     <div class="jumbotron bg-dark text-white"">
         <h1 class="display-4"> Welcome to the Comic Generator</h1>
-        <p class="lead">Hello and Welcome to the comic generator. On this website you can either find the current comic or a random comic.Please refer to tabs above on the nav bar to do this. Emjoy your comics!</p>
+        <p class="lead"></p>
         <hr class="my-4">
-        <hr class="my-4">
+        <p>Hello and Welcome to the comic generator. On this website you can either find the current comic or a random comic. Please refer to tabs above on the nav bar to do this. Enjoy your comics!</p>
     </div> 
-
 
     <div class="CurrentH" style="height:100px; margin-top:20px; font-style:bold; text-decoration:underline; text-align:center; color:black;">
         <h2>The following is the information about your current comic:</h2>
     </div>
 
     <!-- to get and display data-->
-    <div class = "DesctipC" style="text-align:center;">
-    <h1 style="font-weight:normal; font-size:30px;"> <b>Date: </b> <%= data.month %>  /  <%= data.day %>  / <%= data.year %> </h1>
-    <h2 style="font-weight:normal; font-size::30px;"> <b>Comic Num:</b>  <%= data.num %> </h2>
-    <h3 style="font-weight:normal; font-size:30px;"> <b>Comic Title:</b> <%= data.safe_title %> <h3>
+    <div class = "DesctipC" style="text-align:center; margin-top: -40px;">
+        <h1 style="font-weight:normal; font-size:30px;"> <b>Date: </b> <%= data.month %>  /  <%= data.day %>  / <%= data.year %> </h1>
+        <h2 style="font-weight:normal; font-size::30px;"> <b>Comic Num:</b>  <%= data.num %> </h2>
+        <h3 style="font-weight:normal; font-size:30px;"> <b>Comic Title:</b> <%= data.safe_title %> <h3>
     </div>
     
     <center><img src="<%=data.img%>" alt="<%= data.alt %> " max-width="300" max-height="500" style="margin-top:20px; margin-bottom:20px;"> </center>

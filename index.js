@@ -24,8 +24,6 @@ app.get('/', function(req, res){
     });
 })
 
-
-
 //get information for random date
 app.get('/randomComic', function(req, res){
     //function to generate random 

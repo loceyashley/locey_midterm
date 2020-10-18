@@ -9,8 +9,8 @@ CONTENTS OF THIS FILE
 
  * Requirements
     - For this code we are requireing the packages node-fetch, express, and ejs. In order to run this code you will need to reinstall the express package. The following steps is what you should take to run this code:
-        * reinstall express package: npm install express --save
-        * to run the code: node index.js
+        * reinstall express package: <mark> npm install express --save </mark>
+        * to run the code: <mark>  node index.js </mark>
 
 *  Implementation 
 

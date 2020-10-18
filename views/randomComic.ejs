@@ -8,28 +8,37 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="public/styles.css">
+    <link rel="stylesheet" type="text/css" href="public/style.css">
 
     <title>Random Comic</title>
   </head>
-  <body style="  background-color:#d3d8e0; ">
-  <!--Navigation bar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Midterm</a>
+  <body style= " background-color:#d3d8e0; ">
+  
+   <!-- Static navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Menu</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
             <li class="nav-item" th:classappend="${content} == 'home' ? 'active' : ''">
-                <a class="nav-link" href="/">Home <span class="sr-only" th:if="${content} == 'home'"></span></a>
+                <a class="nav-link" href="/">Current Comic <span class="sr-only" th:if="${content} == 'home'"></span></a>
             </li>
-           <li class="nav-item" th:classappend="${content} == 'random' ? 'active' : ''">
-                <a class="nav-link" href="/randomComic">Random Comic<span class="sr-only" th:if="${content} == 'randomComic'">(current)</span></a>
-            </li> 
+            <li class="nav-item" th:classappend="${content} == 'randomComic' ? 'active' : ''">
+                <a class="nav-link" href="/randomComic">Random Comic <span class="sr-only" th:if="${content} == 'randomComic'">(current)</span></a>
+            </li>
             </ul>
         </div>
     </nav>
+
+    <!--Jumbotron-->
+    <div class="jumbotron bg-dark text-white"">
+        <h1 class="display-4"> Random Comic</h1>
+        <p class="lead">Please enjoy the random comic generated for you or you can click the random button to keep generating more comics.</p>
+        <hr class="my-4">
+        <hr class="my-4">
+    </div> 
 
     <div class="RandomH" style="height:100px; margin-top:20px; font-style:bold; text-decoration:underline; text-align:center; color:black;">
         <h2>The following is the information about your random comic:</h2>
@@ -39,13 +48,13 @@
     </div>
 
     <!-- to get and display data-->
-    <div class = "DesctipC" style="text-align:center; ">
+    <div class = "DescripC" style="text-align:center;">
     <h1 style="font-weight:normal; font-size:30px;"> <b>Date: </b> <%= data.month %>  /  <%= data.day %>  / <%= data.year %> </h1>
     <h2 style="font-weight:normal; font-size::30px;"> <b>Comic Num:</b>  <%= data.num %> </h2>
     <h3 style="font-weight:normal; font-size:30px;"> <b>Comic Title:</b> <%= data.safe_title %> <h3>
     </div>
     
-    <center><img src="<%=data.img%>" alt="<%= data.alt %> " max-width="300" max-height="500" style="margin-top:20px;"> </center>
+    <center><img src="<%=data.img%>" alt="<%= data.alt %> " max-width="300" max-height="500" style="margin-top:20px; margin-bottom:20px;"> </center>
     
     
     <!-- Optional JavaScript -->
